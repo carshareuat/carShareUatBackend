@@ -1,0 +1,47 @@
+version: "3.9"
+services:
+  mysql:
+    image: mysql:8.4
+    container_name: carpool-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: ${DB_NAME:-carpool}
+      MYSQL_USER: ${DB_USERNAME:-carpool}
+      MYSQL_PASSWORD: ${DB_PASSWORD:-carpool}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-root}
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "${DB_USERNAME:-carpool}", "-p${DB_PASSWORD:-carpool}"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: carpool-backend
+    depends_on:
+      mysql:
+        condition: service_healthy
+    environment:
+      SPRING_PROFILES_ACTIVE: dev
+      SPRING_FLYWAY_ENABLED: "false"
+      DB_URL: jdbc:mysql://mysql:3306/${DB_NAME:-carpool}?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+      DB_USERNAME: ${DB_USERNAME:-carpool}
+      DB_PASSWORD: ${DB_PASSWORD:-carpool}
+      JWT_SECRET: ${JWT_SECRET:-replace-this-with-at-least-32-char-secret-key-12345}
+      FRONTEND_ORIGIN: ${FRONTEND_ORIGIN:-http://localhost:4200}
+      RAZORPAY_KEY_ID: ${RAZORPAY_KEY_ID:-rzp_test_placeholder}
+      RAZORPAY_KEY_SECRET: ${RAZORPAY_KEY_SECRET:-rzp_test_placeholder}
+      RAZORPAY_WEBHOOK_SECRET: ${RAZORPAY_WEBHOOK_SECRET:-rzp_webhook_placeholder}
+      VAPID_PUBLIC: 'BNbFlsJ2BU9ZVnOG2XEfhF6yZOT-KFKhLDN5EIl_CuhZ2XmdDzn95x_qqpsUs0dX8vWvQDEYHvhGgV9tPm5uiwo'
+      VAPID_PRIVATE: 'v8cFSs6OMMpWaNjgiIHOEk4LbKCtM40lX8GqjWJu__g'
+    ports:
+      - "8080:8080"
+
+volumes:
+  mysql_data:

@@ -1,0 +1,65 @@
+{
+  "owners": [
+    {
+      "id": "owner1",
+      "name": "Ravi Kumar",
+      "mobile": "+919812345678",
+      "verified": false,
+      "rating": 4.6,
+      "ratingsCount": 5
+    },
+    {
+      "id": "owner2",
+      "name": "Sita Sharma",
+      "mobile": "+919876543210",
+      "verified": true,
+      "rating": 4.9,
+      "ratingsCount": 12
+    },
+    {
+      "id": "owner-1786438132740",
+      "name": "8525060169",
+      "mobile": "8525060169",
+      "verified": false,
+      "rating": 0,
+      "ratingsCount": 0
+    },
+    {
+      "id": "owner-1786438162278",
+      "name": "8825858464",
+      "mobile": "8825858464",
+      "verified": false,
+      "rating": 0,
+      "ratingsCount": 0
+    }
+  ],
+  "rides": [
+    {
+      "id": "ride1",
+      "ownerId": "owner1",
+      "from": "MG Road, Bangalore",
+      "to": "Whitefield, Bangalore",
+      "date": "2026-09-01",
+      "startTime": "09:00",
+      "endTime": "10:00",
+      "price": 150,
+      "carModel": "Toyota Etios",
+      "seatsAvailable": 3
+    },
+    {
+      "id": "ride2",
+      "ownerId": "owner2",
+      "from": "Indiranagar, Bangalore",
+      "to": "Electronic City, Bangalore",
+      "date": "2026-09-01",
+      "startTime": "08:30",
+      "endTime": "09:45",
+      "price": 200,
+      "carModel": "Hyundai i20",
+      "seatsAvailable": 2
+    }
+  ],
+  "bookings": [],
+  "ratings": [],
+  "notifications": []
+}

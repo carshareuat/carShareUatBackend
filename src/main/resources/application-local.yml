@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:carshare;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    username: sa
+    password: 
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  flyway:
+    enabled: false
+
+app:
+  jwt:
+    secret: replace-this-with-at-least-32-char-secret-key-12345
+
+logging:
+  level:
+    org.springframework: INFO
+    com.carpool: DEBUG
+    com.carpool.service.PushSenderService: DEBUG
+    com.carpool.service.NotificationService: DEBUG

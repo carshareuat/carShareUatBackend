@@ -1,0 +1,105 @@
+spring:
+  application:
+    name: carpool-backend
+
+  datasource:
+    url: jdbc:mysql://mysql.railway.internal:3306/railway
+    username: root
+    password: LXHRqCDHgwcxkvxLWSWRXfAwDPoWtiNI
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+        type:
+          preferred_uuid_jdbc_type: CHAR
+    show-sql: true
+
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+  flyway:
+    enabled: false
+
+firebase:
+  service-account-json: ${FIREBASE_SERVICE_ACCOUNT_JSON:}
+
+server:
+  port: 8080
+  error:
+    include-message: always
+  forward-headers-strategy: framework
+
+app:
+  jwt:
+    secret: replace-this-with-at-least-32-char-secret-key-12345
+    access-token-minutes: 15
+    refresh-token-days: 30
+
+  cors:
+    allowed-origins:
+      - "http://localhost:4200"
+      - "http://localhost"
+      - "https://localhost"
+      # UAT frontend origin - replace or add additional origins as needed
+      - "https://carshareuat.netlify.app"
+      - "capacitor://localhost"
+
+  # You can override these via environment variables in production, for example:
+  # APP_CORS_ALLOWED-ORIGINS[0]=https://carshareuat.netlify.app
+
+  file-storage:
+    local-root: ./storage
+    kyc-private-dir: kyc-private
+    profile-public-dir: profile-public
+
+  security:
+    rate-limit:
+      auth-per-minute: 20
+      upload-per-minute: 10
+
+  subscription:
+    currency: INR
+    provider: mock
+
+  razorpay:
+    key-id: rzp_test_TOTDgVo8joB0WQ
+    key-secret: 8LJcAF64HY9r8xxvRz7yM9Zm
+    webhook-secret: Goodluck@07040309
+
+  admin:
+    mobile: "6381110664"
+    password: "Goodluck@07040309"
+
+  # Web Push (VAPID) keys. Defaults below let push notifications work out-of-the-box
+  # in local development without extra setup. Override VAPID_PUBLIC/VAPID_PRIVATE
+  # environment variables in production deployments to use your own keypair
+  # (generate one with: node tools/generate-vapid.js).
+  vapid:
+    public-key: ${VAPID_PUBLIC:BNbFlsJ2BU9ZVnOG2XEfhF6yZOT-KFKhLDN5EIl_CuhZ2XmdDzn95x_qqpsUs0dX8vWvQDEYHvhGgV9tPm5uiwo}
+    private-key: ${VAPID_PRIVATE:v8cFSs6OMMpWaNjgiIHOEk4LbKCtM40lX8GqjWJu__g}
+    subject: ${VAPID_SUBJECT:mailto:admin@carshare.example}
+
+logging:
+  pattern:
+    console: '{"timestamp":"%d{yyyy-MM-dd''T''HH:mm:ss.SSSXXX}","level":"%p","thread":"%t","logger":"%c","message":"%m"}%n'
+
+  level:
+    org.hibernate.SQL: DEBUG
+    org.springframework.jdbc: DEBUG
+    com.zaxxer.hikari: DEBUG
+    com.carpool.service.PushSenderService: DEBUG
+    com.carpool.service.NotificationService: WARN
+    com.carpool.controller.PassengerController: ERROR
+
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html

@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "carshare-195f9",
+  "private_key_id": "48f6237ae99f8b9e9f3b1383553f2cf22bcf22b8",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC9CsSzwl0VBGm5\nvmL/e34wk8J3WmJ3w18aKQG/N/teAh4A1XL5/FwtfzT4/PnahtQGguZzamAvFQmF\nucNJUbqgN68pG5hfmbU14JRom07M0bvCVrSErMW4boIV8OSK+WhPneGlI72TrKDG\nQd1ztqkz5jejpKYABa/08bOJYFBEveAatxqXKBnqCRJEX/Xldj/DRvffUqMHTYmk\n4GV0r0RlX91yhZ5CS2Qg1mdVNOntmBW3SZ7Z3eau+c9+AbCtP09LfV78CvJy+ru9\ngvA2Csr4Qee55j5unyx95iHs3CrLhAFAU6gV6wcYf7B/i0L4QwhsR/vG3+ukDSXf\nO7kd5pQRAgMBAAECggEACcGhhJQru6bzp0DFLoxQEe++TJdJ7QZp78QIBrdmmLkh\nP/Ju3FStk9zfKK6IXUKHdM09WYg27ex3BljKVGFhxrJjrt/GuGsKvXzEDAtf62re\nTC8EuAg2rXMT8aVHa54S8nD32/mr52WJvVGu59xDKp40vD8GIOAqREj+dsDqw5wL\nshk9gcrlRmcxVMIzdHR4LzRzStytMqO2L/bmuLyx7OYjUpeSHFb3q1Kd4L3VXTE3\njejSiOz4PfmyPSUfjTIlgDf624yjFHnETP+lEMd2IB6R89F5+10E0mQ+BmqMZXw0\nE5cjansP3MK+iLbcmkviheMpyyFpkGO5ORGCnNwitQKBgQDcybZUyWOh/sxnHFTV\nw33B2KyEOiGzr094V1dpbgQbMYtiJYitnjSqPGUjLgg+SbkjbjuGBGICUaOASd8E\nZynGFHVpbc3ZdDSdYRdm26pPExl8AqcuZCqdc+Y6IrZKQ04P5uOW7m/fRfNx0X+A\npMwXWIaDRSr6TfkVhAbobg9tKwKBgQDbMPEPPki9WiJTAm/f3/obzLwE8QHNaW7B\nBecjXEPFtEq9McYdRzBvF1vBfU2phNh03J3x8x1/Ro9WE/dTuHh7fOeVnqAZfcOC\n/heriBpHTIT7I6YQJ2SgCaQ93z8e0fxaRIgil1YK8tIIExV5Oas0dMkWvyy0C2Dd\nj4BTK049swKBgQCqjCYL2ITd3bSG8ZuWhCvgUT7x5PWjlwgMLWuYRSNm3h6M8fFi\nK5MC7SQyyJwVgV1BwSS5oSkUIXvq3SUogYgDOkp35hncn6cE6rro+UXVTyugX2xE\nqZtBhQWSYr3tH5BtOC0VqZlBHweuI+YZuTLt1bQSMpvAPfrqY9HyORIxgQKBgDbq\n2DrdfBQVFSx/G9CXqW51qVYDnFP+6oTqGbM+VqyeM2uboOuM/pGW5KJh5qdmZWVC\nMUCBjQ5qe1cxwXH0chtefBd8mthILkgPqZaMjyj1/wt9Lwo1FH0UbVYjLQlnyzZC\nnWktSZ2MoRrszSCGVmLaL9fHJkgl4ashXSF5ZC0JAoGBALsCc8BRuUUWOpV3L86y\nE8pcI1mXdL6VzNGLd3VvuDGtrAsXt/ukTmDNC+0JenitRXP1SjRk/oLVCJDRQgi+\n0Y5JzQdHFVcthxhYd+yeJz29gjn/5mG9MO5/B6rKeY6vyVCADNCbRb2uhENPknZ1\nYcN4g0lSQ5rlp9SBkvIUJ3wD\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-fbsvc@carshare-195f9.iam.gserviceaccount.com",
+  "client_id": "111451812353704119039",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-fbsvc%40carshare-195f9.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
